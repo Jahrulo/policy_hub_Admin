@@ -80,7 +80,7 @@ export const LoginForm = () => {
             />
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#16151C]">
-            IHPAU
+            Moh Policy Document Hub
           </h2>
           <p className="text-base sm:text-lg font-normal">
             Policy Document <br /> System
