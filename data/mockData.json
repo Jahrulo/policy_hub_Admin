@@ -1,0 +1,332 @@
+{
+  "User": [
+    {
+      "id": "user1",
+      "email": "admin1@example.com",
+      "password": "hashedpassword1",
+      "role": "ADMIN",
+      "createdAt": "2024-01-01T10:00:00Z",
+      "updatedAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "user2",
+      "email": "secretary1@example.com",
+      "password": "hashedpassword2",
+      "role": "SECRETARY",
+      "createdAt": "2024-01-02T12:00:00Z",
+      "updatedAt": "2024-01-02T12:00:00Z"
+    },
+    {
+      "id": "user3",
+      "email": "user3@example.com",
+      "password": "hashedpassword3",
+      "role": "OTHER",
+      "createdAt": "2024-01-03T13:00:00Z",
+      "updatedAt": "2024-01-03T13:00:00Z"
+    },
+    {
+      "id": "user4",
+      "email": "admin2@example.com",
+      "password": "hashedpassword4",
+      "role": "ADMIN",
+      "createdAt": "2024-01-04T14:00:00Z",
+      "updatedAt": "2024-01-04T14:00:00Z"
+    },
+    {
+      "id": "user5",
+      "email": "secretary2@example.com",
+      "password": "hashedpassword5",
+      "role": "SECRETARY",
+      "createdAt": "2024-01-05T15:00:00Z",
+      "updatedAt": "2024-01-05T15:00:00Z"
+    }
+  ],
+  "Department": [
+    {
+      "id": "dept1",
+      "name": "Human Resources",
+      "description": "Handles HR tasks",
+      "correspondenceDuration": 5,
+      "createdAt": "2024-01-01T09:00:00Z",
+      "updatedAt": "2024-01-01T09:00:00Z"
+    },
+    {
+      "id": "dept2",
+      "name": "Finance",
+      "description": "Handles finances",
+      "correspondenceDuration": 7,
+      "createdAt": "2024-01-02T09:00:00Z",
+      "updatedAt": "2024-01-02T09:00:00Z"
+    },
+    {
+      "id": "dept3",
+      "name": "IT Support",
+      "description": "Manages technical support",
+      "correspondenceDuration": 3,
+      "createdAt": "2024-01-03T09:00:00Z",
+      "updatedAt": "2024-01-03T09:00:00Z"
+    },
+    {
+      "id": "dept4",
+      "name": "Operations",
+      "description": "Oversees company operations",
+      "correspondenceDuration": 6,
+      "createdAt": "2024-01-04T09:00:00Z",
+      "updatedAt": "2024-01-04T09:00:00Z"
+    },
+    {
+      "id": "dept5",
+      "name": "Marketing",
+      "description": "Leads marketing initiatives",
+      "correspondenceDuration": 4,
+      "createdAt": "2024-01-05T09:00:00Z",
+      "updatedAt": "2024-01-05T09:00:00Z"
+    }
+  ],
+  "Partner": [
+    {
+      "id": "partner1",
+      "name": "Partner One",
+      "description": "Primary business partner",
+      "email": "partner1@example.com",
+      "date": "2024-01-01T12:00:00Z",
+      "createdAt": "2024-01-01T12:00:00Z",
+      "updatedAt": "2024-01-01T12:00:00Z"
+    },
+    {
+      "id": "partner2",
+      "name": "Partner Two",
+      "description": "Secondary partner",
+      "email": "partner2@example.com",
+      "date": "2024-01-02T12:00:00Z",
+      "createdAt": "2024-01-02T12:00:00Z",
+      "updatedAt": "2024-01-02T12:00:00Z"
+    },
+    {
+      "id": "partner3",
+      "name": "Partner Three",
+      "description": "New partnership",
+      "email": "partner3@example.com",
+      "date": "2024-01-03T12:00:00Z",
+      "createdAt": "2024-01-03T12:00:00Z",
+      "updatedAt": "2024-01-03T12:00:00Z"
+    },
+    {
+      "id": "partner4",
+      "name": "Partner Four",
+      "description": "Key partner",
+      "email": "partner4@example.com",
+      "date": "2024-01-04T12:00:00Z",
+      "createdAt": "2024-01-04T12:00:00Z",
+      "updatedAt": "2024-01-04T12:00:00Z"
+    },
+    {
+      "id": "partner5",
+      "name": "Partner Five",
+      "description": "Affiliate",
+      "email": "partner5@example.com",
+      "date": "2024-01-05T12:00:00Z",
+      "createdAt": "2024-01-05T12:00:00Z",
+      "updatedAt": "2024-01-05T12:00:00Z"
+    }
+  ],
+  "Staff": [
+    {
+      "id": "staff1",
+      "name": "Alice Johnson",
+      "phoneNumber": "111-222-3333",
+      "email": "alice@example.com",
+      "donorLink": "http://example.com/donor1",
+      "createdAt": "2024-01-01T13:00:00Z",
+      "updatedAt": "2024-01-01T13:00:00Z",
+      "userId": "user2",
+      "departmentId": "dept1",
+      "partnerId": null
+    },
+    {
+      "id": "staff2",
+      "name": "Bob Smith",
+      "phoneNumber": "222-333-4444",
+      "email": "bob@example.com",
+      "donorLink": "http://example.com/donor2",
+      "createdAt": "2024-01-02T13:00:00Z",
+      "updatedAt": "2024-01-02T13:00:00Z",
+      "userId": "user3",
+      "departmentId": "dept2",
+      "partnerId": null
+    },
+    {
+      "id": "staff3",
+      "name": "Charlie Brown",
+      "phoneNumber": "333-444-5555",
+      "email": "charlie@example.com",
+      "donorLink": "http://example.com/donor3",
+      "createdAt": "2024-01-03T13:00:00Z",
+      "updatedAt": "2024-01-03T13:00:00Z",
+      "userId": "user4",
+      "departmentId": "dept3",
+      "partnerId": "partner2"
+    },
+    {
+      "id": "staff4",
+      "name": "Dana White",
+      "phoneNumber": "444-555-6666",
+      "email": "dana@example.com",
+      "donorLink": "http://example.com/donor4",
+      "createdAt": "2024-01-04T13:00:00Z",
+      "updatedAt": "2024-01-04T13:00:00Z",
+      "userId": "user5",
+      "departmentId": "dept4",
+      "partnerId": null
+    },
+    {
+      "id": "staff5",
+      "name": "Eve Davis",
+      "phoneNumber": "555-666-7777",
+      "email": "eve@example.com",
+      "donorLink": "http://example.com/donor5",
+      "createdAt": "2024-01-05T13:00:00Z",
+      "updatedAt": "2024-01-05T13:00:00Z",
+      "userId": "user1",
+      "departmentId": "dept5",
+      "partnerId": "partner4"
+    },
+    {
+      "id": "40d4",
+      "department": "dept3",
+      "name": "Emmanuel Keifala",
+      "email": "emmauelkeifala@gmail.com",
+      "phoneNumber": "0796498205",
+      "description": "test here",
+      "donor": "2a22"
+    }
+  ],
+  "Correspondence": [
+    {
+      "id": "001",
+      "date": "2024-11-08T12:30:00Z",
+      "name": "COVID-19 Vaccination Drive",
+      "sponsor": "HealthFirst Foundation",
+      "status": "Pending",
+      "amount": "$12,000",
+      "time": "2024-10-12T09:30:00Z",
+      "priority": "High",
+      "createdAt": "2024-11-08T12:00:00Z",
+      "updatedAt": "2024-11-08T12:00:00Z",
+      "ended": false,
+      "category": "pending",
+      "responses": [
+        {
+          "id": "01",
+          "responseDate": "2024-10-12T10:30:00Z",
+          "responseText": "Follow-up required for booster shots.",
+          "sentTo": "Finance"
+        }
+      ],
+      "department": "Public Health",
+      "partner": "Government Health Ministry"
+    },
+    {
+      "id": "002",
+      "date": "2024-11-06T16:45:00Z",
+      "name": "Mental Health Awareness Campaign",
+      "sponsor": "Mental Wellness Foundation",
+      "status": "Pending",
+      "amount": "$5,000",
+      "time": "2024-11-06T18:00:00Z",
+      "priority": "Medium",
+      "createdAt": "2024-11-06T16:00:00Z",
+      "updatedAt": "2024-11-06T16:45:00Z",
+      "ended": false,
+      "category": "pending",
+      "responses": [
+        {
+          "id": "002",
+          "responseDate": "2024-11-06T17:00:00Z",
+          "responseText": "Great engagement from community centers.",
+          "sentTo": "Program Coordinator"
+        }
+      ],
+      "department": "Community Outreach",
+      "partner": "Regional Health Alliance"
+    },
+    {
+      "id": "003",
+      "date": "2024-11-07T14:30:00Z",
+      "name": "Diabetes Prevention Workshop",
+      "sponsor": "Diabetes Awareness Trust",
+      "status": "Sent To Finance",
+      "amount": "$3,500",
+      "time": "2024-11-06T15:00:00Z",
+      "priority": "Low",
+      "createdAt": "2024-11-07T14:00:00Z",
+      "updatedAt": "2024-11-07T14:30:00Z",
+      "ended": false,
+      "category": "ongoing",
+      "responses": [
+        {
+          "id": "003",
+          "responseDate": "2024-11-07T14:15:00Z",
+          "responseText": "Positive feedback from attendees.",
+          "sentTo": "Finance"
+        }
+      ],
+      "department": "Health Education",
+      "partner": "Local Health Centers"
+    },
+    {
+      "id": "004",
+      "date": "2024-11-05T10:00:00Z",
+      "name": "Nutrition and Wellness Fair",
+      "sponsor": "Wellness Alliance",
+      "status": "Sent To Finance",
+      "amount": "$9,000",
+      "time": "2024-11-05T08:30:00Z",
+      "priority": "Medium",
+      "createdAt": "2024-11-05T09:00:00Z",
+      "updatedAt": "2024-11-05T10:00:00Z",
+      "ended": false,
+      "category": "ongoing",
+      "responses": [
+        {
+          "id": "004",
+          "responseDate": "2024-11-05T09:30:00Z",
+          "responseText": "Nutrition workshop completed successfully.",
+          "sentTo": "Program Director"
+        }
+      ],
+      "department": "Wellness Programs",
+      "partner": "Community Health Group"
+    },
+    {
+      "id": "005",
+      "date": "2024-11-01T09:15:00Z",
+      "name": "Annual Immunization Outreach",
+      "sponsor": "Healthcare Network",
+      "status": "Completed",
+      "amount": "$10,500",
+      "time": "2024-11-01T08:00:00Z",
+      "priority": "High",
+      "createdAt": "2024-11-01T08:30:00Z",
+      "updatedAt": "2024-11-01T09:00:00Z",
+      "ended": true,
+      "category": "completed",
+      "responses": [
+        {
+          "id": "05",
+          "responseDate": "2024-11-01T09:00:00Z",
+          "responseText": "Successful outreach with 80% of target immunized.",
+          "sentTo": "Finance"
+        },
+        {
+          "id": "06",
+          "responseDate": "2024-11-01T09:30:00Z",
+          "responseText": "Post-campaign survey indicates high satisfaction.",
+          "sentTo": "Stakeholder Relations"
+        }
+      ],
+      "department": "Preventive Health",
+      "partner": "National Health Council"
+    }
+  ]
+}
