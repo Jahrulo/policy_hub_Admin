@@ -14,17 +14,17 @@ import { supabase } from "../services/supabase";
 import { useEffect, useState } from "react";
 
 const Menu = () => {
-  const [userData, setUserData] = useState();
+  // const [userData, setUserData] = useState();
 
-  useEffect(() => {
-    const getUserData = async () => {
-      const { data, error } = await supabase.auth.getSession();
-      setUserData(data?.session?.user);
-    };
-    getUserData();
-  }, []);
+  // useEffect(() => {
+  //   const getUserData = async () => {
+  //     const { data, error } = await supabase.auth.getSession();
+  //     setUserData(data?.session?.user);
+  //   };
+  //   getUserData();
+  // }, []);
 
-  const role = userData?.user_metadata?.role;
+  // const role = userData?.user_metadata?.role;
 
   const menuItems = [
     {
@@ -57,12 +57,12 @@ const Menu = () => {
     },
   ];
 
-  const isVisible = (item) => {
-    if (!item.visible) {
-      return true;
-    }
-    return item.visible.includes(role);
-  };
+  // const isVisible = (item) => {
+  //   if (!item.visible) {
+  //     return true;
+  //   }
+  //   return item.visible.includes(role);
+  // };
 
   return (
     <div className="mt-4 text-sm SS">
@@ -70,7 +70,7 @@ const Menu = () => {
         <div className="flex flex-col gap-2" key={index - index}>
           {section.items.map(
             (item) =>
-              isVisible(item) && (
+               (
                 <SideBar
                   key={item.label}
                   icon={item.icon}

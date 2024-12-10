@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import AddForm from "./Form";
+/* eslint-disable react/prop-types */
+import  { useState } from "react";
+import AddForm from "./AddForm";
+import { formatDateToReadableString } from "../lib/utils";
 
-const StaffTile = ({ tileData, activeTab }) => {
+const Tile = ({ tileData, activeTab }) => {
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -55,7 +57,7 @@ const StaffTile = ({ tileData, activeTab }) => {
   );
 };
 
-export default StaffTile;
+export default Tile;
 
 function TileCard({ title, description, imgSrc, date }) {
   return (
@@ -82,7 +84,7 @@ function TileCard({ title, description, imgSrc, date }) {
         </p>
       </div>
       <div className="text-sm text-[#A2A1A8] font-normal">
-        {new Date(date).toLocaleDateString()}
+        {formatDateToReadableString(date)}
       </div>
     </div>
   );

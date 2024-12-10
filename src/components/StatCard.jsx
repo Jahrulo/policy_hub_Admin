@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 
 const StatCard = ({ title, value, lastUpdated, icon: Icon, percentage }) => {
   const getStatusStyles = (status) => {

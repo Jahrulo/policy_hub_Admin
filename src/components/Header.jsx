@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Button } from "/src/components/ui/button";
 import {
   DropdownMenu,
@@ -13,7 +14,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../services/supabase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import NotificationDropdown from "./NotificationDropdown";
+// import NotificationDropdown from "./NotificationDropdown";
 
 function Header() {
   // We can store this in our global state
@@ -52,7 +53,8 @@ function Header() {
     <header className="bg-transparent p-2 flex justify-end items-center">
       <div className="flex items-center gap-6">
         <div className="relative hidden md:block">
-          <NotificationDropdown />
+          {/* <NotificationDropdown /> */}
+          <Bell />
         </div>
 
         <DropdownMenu>
@@ -65,15 +67,17 @@ function Header() {
                 <Avatar className="h-10 w-10">
                   <AvatarImage src="/placeholder.svg" alt="JDK" />
                   <AvatarFallback className="text-black">
-                    {userData?.email?.split("@")[0].slice(0, 2).toUpperCase()}
+                    {/* {userData?.email?.split("@")[0].slice(0, 2).toUpperCase()} */}
+                    JDK
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col items-start">
                   <span className="text-base font-semibold ">
-                    {userData?.email
+                    {/* {userData?.email
                       .split("@gmail.com")
                       .join()
-                      .replace(",", "")}
+                      .replace(",", "")} */}
+                    Admin
                   </span>
 
                   <span className="text-sm text-black uppercase">

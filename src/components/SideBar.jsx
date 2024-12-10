@@ -1,4 +1,5 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+/* eslint-disable react/prop-types */
+import {  useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 function SideBar({ icon: Icon, label, href, imgSrc }) {

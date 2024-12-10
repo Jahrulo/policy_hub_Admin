@@ -1,7 +1,6 @@
-import SideBar from "./SideBar";
 import Header from "./Header";
 import { Link, Outlet } from "react-router-dom";
-import Menu from "./Menu";
+import Menu from './Menu';
 
 function AppLayout() {
   return (
@@ -19,7 +18,7 @@ function AppLayout() {
             className="w-[50%] h-[50%]"
           />
         </Link>
-        <Menu />
+       <Menu />
       </div>
 
       <div className="flex-1 overflow-auto w-1/10">
