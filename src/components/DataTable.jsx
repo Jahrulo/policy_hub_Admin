@@ -62,10 +62,10 @@ export default function DataTable({
           <Search className="absolute top-1/2 left-3 -translate-y-1/2 text-stone-900" />
           <input
             type="text"
-            placeholder="Search by name | type"
+            placeholder="Search by name | type "
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-70 pl-10 pr-5 py-1 border text-md font-normal border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+            className="w-70 pl-10 pr-5 py-1 border text-sm font-normal border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
           />
         </div>
       </div>

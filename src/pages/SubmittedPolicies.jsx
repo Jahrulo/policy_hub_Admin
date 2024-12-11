@@ -100,11 +100,12 @@ function SubmittedPolicies() {
   ];
 
   const columns = [
-    { key: "name", label: "Name" },
-    { key: "type", label: "Type" },
-    { key: "publication_date", label: "Publication Date" },
-    { key: "program_name", label: "Program Name" },
+    { key: "name", label: "Title" },
+    { key: "program_name", label: "Program" },
     { key: "uploader_name", label: "Uploaded By" },
+    { key: "type", label: "Type" },
+    { key: "page_count", label: "Pages" },
+    { key: "publication_date", label: "Publication Date" },
     {
       key: "status",
       label: "Status",
@@ -139,24 +140,23 @@ function SubmittedPolicies() {
   ];
 
   return (
-    <div className="space-y-8">
-      <TabNavigation
-        items={tabs}
-        defaultValue={selectedTab}
-        basePath="/dashboard/policies"
-      />
-
-      {/* Data - Table and Search */}
+    <>
+      <div className="space-y-8">
+        <TabNavigation
+          items={tabs}
+          defaultValue={selectedTab}
+          basePath="/dashboard/policies"
+        />
+      </div>
       <div className="flex justify-between items-center">
         <DataTable
           rows={documents}
           columns={columns}
           searchKeys={["name", "type", "program_name", "uploader_name"]}
-          caption="A list of submitted policy documents."
+          caption="A LIST OF SUBMITTED POLICIES DOCUMENTS."
         />
-     
       </div>
-    </div>
+    </>
   );
 }
 

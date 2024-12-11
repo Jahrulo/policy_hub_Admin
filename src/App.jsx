@@ -9,6 +9,7 @@ import Policies from "./pages/Policies";
 import DirectoratesPolicies from "./pages/DirectoratePolicies";
 import Settings from "./pages/Settings";
 import SubmittedPolicies from "./pages/SubmittedPolicies";
+import Policy from "./pages/Policy";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             path="dashboard/program-directorates"
             element={<DirectoratesPolicies />}
           />
-          <Route path="/dashboard/policies" element={<Policies />} />
+          <Route path="/dashboard/policies" element={<Policy />} />
           <Route
             path="/dashboard/policies/all-policies"
             element={<Policies />}
