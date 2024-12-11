@@ -24,7 +24,7 @@ function SideBar({ icon: Icon, label, href, imgSrc }) {
       )}
     >
       <div className="flex items-center gap-x-1 py-4">
-        <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
           {Icon ? (
             <Icon
               size={30}
@@ -40,7 +40,7 @@ function SideBar({ icon: Icon, label, href, imgSrc }) {
             />
           )}
         </div>
-        <p className="hidden lg:block text-left font-Mons font-semibold text-lg px-2 break-words">
+        <p className="hidden lg:block text-left font-Mons font-semibold text-md px-2 break-words">
           {label}
         </p>
       </div>

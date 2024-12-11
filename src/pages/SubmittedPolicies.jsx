@@ -95,8 +95,8 @@ function SubmittedPolicies() {
 
   // Tabs configuration with values and labels
   const tabs = [
-    { value: "submitted-policies", label: "Submitted Policies" },
     { value: "all-policies", label: "All Policies" },
+    { value: "submitted-policies", label: "Submitted Policies" },
   ];
 
   const columns = [
