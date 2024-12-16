@@ -11,6 +11,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  SelectGroup, 
+  SelectLabel
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 
@@ -126,14 +128,17 @@ export default function AddProgram() {
                         <SelectValue placeholder="Select Directorate" />
                       </SelectTrigger>
                       <SelectContent>
-                        {directorates.map((directorate) => (
-                          <SelectItem
-                            key={directorate.id}
-                            value={directorate.id}
-                          >
-                            {directorate.name}
-                          </SelectItem>
-                        ))}
+                        <SelectGroup>
+                          <SelectLabel>Directorates</SelectLabel>
+                          {directorates?.map((directorate) => (
+                            <SelectItem
+                              key={directorate.id}
+                              value={directorate.id.toString()}
+                            >
+                              {directorate.name}
+                            </SelectItem>
+                          ))}
+                        </SelectGroup>
                       </SelectContent>
                     </Select>
                   )}
