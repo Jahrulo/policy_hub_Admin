@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import {
@@ -13,8 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 
 export default function DataTable({
-  rows,
-  columns,
+  rows = [],
+  columns = [],
   searchKeys = [],
   caption,
   itemsPerPage = 5,
@@ -22,19 +21,22 @@ export default function DataTable({
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Reset currentPage to 1 when searchQuery changes
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery]);
 
-  // Filter rows based on the search query and specified keys
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return <div>No data available</div>;
+  }
+
   const filteredRows = rows.filter((row) =>
     searchKeys.some((key) =>
-      String(row[key]).toLowerCase().includes(searchQuery.toLowerCase())
+      String(row[key] || "")
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase())
     )
   );
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredRows.length / itemsPerPage);
   const paginatedRows = filteredRows.slice(
     (currentPage - 1) * itemsPerPage,
@@ -55,7 +57,6 @@ export default function DataTable({
 
   return (
     <div className="container mx-auto py-10">
-      {/* Header Row with Caption and Search */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-medium text-md">{caption}</h3>
         <div className="relative max-w-sm">
@@ -70,7 +71,6 @@ export default function DataTable({
         </div>
       </div>
 
-      {/* Scrollable Table */}
       <div className="overflow-y-auto max-h-80 border rounded-md">
         <Table className="table-auto w-full">
           <TableHeader className="sticky top-0 bg-[#edf4f5] shadow">
@@ -87,7 +87,9 @@ export default function DataTable({
               <TableRow key={row.id || rowIndex}>
                 {columns.map((col) => (
                   <TableCell key={col.key}>
-                    {col.render ? col.render(row[col.key], row) : row[col.key]}
+                    {col.render
+                      ? col.render(row[col.key], row)
+                      : row[col.key] || "N/A"}
                   </TableCell>
                 ))}
               </TableRow>
@@ -96,7 +98,6 @@ export default function DataTable({
         </Table>
       </div>
 
-      {/* Pagination Controls */}
       <div className="flex items-center justify-between py-4">
         <p className="text-sm text-muted-foreground">
           Showing {currentPage} of {totalPages} entries
