@@ -7,8 +7,10 @@ import { Eye } from "lucide-react";
 import { toast } from "react-toastify";
 import { Badge } from "../components/ui/badge";
 import { useDocuments, usePrograms } from "../Queries";
+import {  useNavigate } from "react-router-dom";
 
 function SubmittedPolicies() {
+  const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("submitted-policies");
   const { documents } = useDocuments();
   const { program } = usePrograms();
@@ -18,6 +20,10 @@ function SubmittedPolicies() {
     acc[program.id] = program.name;
     return acc;
   }, {});
+
+  const handleClick = (documentId) => {
+    navigate(`/dashboard/policies/document/${documentId}`);
+  };
 
   // Tabs configuration with values and labels
   const tabs = [
@@ -60,10 +66,7 @@ function SubmittedPolicies() {
       key: "actions",
       label: "Actions",
       render: (_, row) => (
-        <Button
-          size="sm"
-          onClick={() => toast.success(`Viewing details for ${row.name}`)}
-        >
+        <Button size="sm" onClick={() => handleClick(row.id)}>
           <Eye />
         </Button>
       ),

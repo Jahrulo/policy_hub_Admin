@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Programs from "./pages/Programs";
 import Directorates from "./pages/Directorates";
+import Document from "./pages/Document";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -57,6 +58,7 @@ function App() {
               path="/dashboard/policies/submitted-policies"
               element={<SubmittedPolicies />}
             />
+            <Route path="/dashboard/policies/document/:id" element={<Document />} />
 
             <Route path="dashboard/settings" element={<Settings />} />
           </Route>
